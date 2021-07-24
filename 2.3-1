@@ -6,6 +6,6 @@ import xlrd3
 wb = xlrd3.open_workbook('trekking1.xlsx')
 sh = wb.sheet_by_index(0)
 calories = [(pr.value, cal.value) for pr, cal in zip(sh.col(0), sh.col(1))][1:]
-calories.sort(reverse)
+calories.sort()
 for i in sorted(calories, key = lambda x: float(x[1]), reverse=True):
     print(i[0])
