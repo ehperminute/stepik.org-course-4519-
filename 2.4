@@ -6,6 +6,9 @@
 
 from io import BytesIO
 import openpyxl
+import zipfile
+from urllib.request import urlopen
+
 resp = urlopen("https://stepik.org/media/attachments/lesson/245299/rogaikopyta.zip")
 employees = {}
 with zipfile.ZipFile(BytesIO(resp.read())) as zipfile:
