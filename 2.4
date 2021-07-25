@@ -16,3 +16,13 @@ with zipfile.ZipFile(BytesIO(resp.read())) as zipfile:
             employees[ws[2][1].value] = employees.get(ws[2][1].value, 0) + int(ws[2][3].value)
 for employee in sorted(employees.keys()):
     print(employee + ' ' + str(employees[employee]))
+    
+# вывод ведомости в .xlsx файл:
+#bill = openpyxl.Workbook()
+#ws = bill.active
+#ws.cell(column=1, row=1).value = 'ФИО'
+#ws.cell(column=2, row=1).value = 'Начислено'
+#for i, employee in enumerate(sorted(employees.keys()), start=2):
+    #ws.cell(column=1, row=i).value = employee
+    #ws.cell(column=2, row=i).value = employees[employee]
+#bill.save('bill.xlsx')
