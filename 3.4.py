@@ -9,3 +9,13 @@ tree = E.parse(xmlfile)
 root = tree.getroot()
 gasstations = root.findall('*/tag[@k="amenity"][@v="fuel"]')
 print(len(gasstations)) 
+
+#using lxml
+#from lxml import etree as E
+#from urllib.request import urlopen
+
+#xmlfile = urlopen('https://stepik.org/media/attachments/lesson/245681/map2.osm')
+#tree = E.parse(xmlfile)
+#root = tree.getroot()
+#gasstations = root.findall('*/tag[@k="amenity"][@v="fuel"]')
+#print(len(gasstations)) 
